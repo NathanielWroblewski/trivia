@@ -2,6 +2,11 @@ body {
   background-color: lightgray;
 }
 
+#content {
+  height: 100%;
+  width: 100%;
+}
+
 nav {
   display: none;
 }
@@ -33,6 +38,14 @@ nav {
   background-repeat: no-repeat;
 }
 
+
+
+#flip-button { 
+  height: 400px;
+  width: 400px;
+  background-color: #00E2D7;
+}
+
 #dealer-game-new {
   display: none;
 }
@@ -42,7 +55,7 @@ nav {
 }
 
 #dealer-game-show {
-  display: none;
+  /*display: none;*/
 }
 
 #game-over {
