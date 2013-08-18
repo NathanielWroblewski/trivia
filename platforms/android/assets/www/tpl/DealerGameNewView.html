@@ -1,8 +1,30 @@
+<div id='dng-title'>new game</div>
 <form>
-	<p>Game Name:</p>
-	<input class="dealer-game-name" type="text" name="name">
-	<p>Your Name:</p>
-	<input class="dealer-dealer-name" type="submit" value="Create Game">
+  <div id='dng-options'>
+    <p>set up your name</p>
+    <div>
+    	<label>your name</label>
+      <input class="dealer-game-name" type="text" name="dng-dealer-name">
+
+      <label>game game:</label>
+    	<input class="dealer-game-name" type="text" name="dng-game-name">
+    </div>
+  </div>
+  <div id='dng-deck-title'>choose your deck</div>
+  <div id='dng-deck-options'>
+    <input id='one' type='radio' name='deck' />
+    <label for='one'>one</label>
+    <input id='two' type='radio' name='deck' />
+    <label for='two'>two</label>
+    <input id='three' type='radio' name='deck' />
+    <label for='three'>three</label>
+    <input id='four' type='radio' name='deck' />
+    <label for='four'>three</label>
+    <input id='five' type='radio' name='deck' />
+    <label for='five'>three</label>
+  </div>
+  <div id='dng-break'></div>
+	<input id='dng-next' cs="dealer-dealer-name" type="submit" value="next">
 </form>
 <button class="dealer-new-game-button" type="button">
 	Cancel
