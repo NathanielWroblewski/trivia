@@ -1,0 +1,41 @@
+body {
+  background-color: transparent;
+  background-size: 100%;
+  z-index: 0;
+  background-image: url("../img/D1_page01-03-bkg.png");
+}
+
+#home-page {
+  /*display: none;*/
+}
+
+#new-button {
+  background-image: url("../img/D1_page01-02.png");
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+}
+
+#dealer-game-new {
+  display: none;
+}
+
+#dealer-deck-index {
+  display: none;
+}
+
+#dealer-game-show {
+  display: none;
+}
+
+#game-over {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+.app {
+  display: none;
+}
