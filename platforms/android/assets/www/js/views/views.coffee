@@ -92,6 +92,7 @@ window.DealerGameShowView = Backbone.View.extend
   flickCard: ->
     $('.card-swipe-area').addClass 'hidden'
     $('.flip-button').removeClass 'hidden'
+    'card': 'Cards-11.png'
 
   nextCard: ->
     $('.flip-button').addClass 'hidden'
@@ -141,11 +142,11 @@ window.PlayerCardView = Backbone.View.extend
     @.$el.html @.template()
     @
 
-  events:
-    'click #choice-a':    
-    'click #choice-b':    
-    'click #choice-c':    
-    'click #choice-d':    
+  # events:
+  #   'click #choice-a':    
+  #   'click #choice-b':    
+  #   'click #choice-c':    
+  #   'click #choice-d':    
 
 # window.NavBar = Backbone.View.extend
 #   tagName: 'nav'

@@ -7,6 +7,8 @@
       '': 'home_page',
       'dealer_game_new': 'dealer_game_new',
       'player_games_index': 'player_games_index',
+      'player_card_view': 'player_card_view',
+      'dealer_deck_index': 'dealer_deck_index',
       'dealer_game_show': 'dealer_game_show',
       'dealer_stats_show': 'dealer_stats_show',
       'game_over': 'game_over'
@@ -27,6 +29,11 @@
       $('#content').html(this.playerGamesIndexView.el);
       return this.playerGamesIndexView.render();
     },
+    player_card_view: function() {
+      this.playerCardView = new playerCardView();
+      $('#content').html(this.playerCardView.el);
+      return this.playerCardView.render();
+    },
     dealer_deck_index: function() {
       this.dealerDeckIndexView = new DealerDeckIndexView();
       $('#content').html(this.dealerDeckIndexView.el);
@@ -45,7 +52,7 @@
   });
 
   deviceReady = function() {
-    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView'], function() {
+    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView', 'PlayerGamesIndex', 'PlayerCardView'], function() {
       window.app = new Router();
       return Backbone.history.start();
     });

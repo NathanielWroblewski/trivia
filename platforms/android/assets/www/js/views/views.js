@@ -91,7 +91,10 @@
     },
     flickCard: function() {
       $('.card-swipe-area').addClass('hidden');
-      return $('.flip-button').removeClass('hidden');
+      $('.flip-button').removeClass('hidden');
+      return {
+        'card': 'Cards-11.png'
+      };
     },
     nextCard: function() {
       $('.flip-button').addClass('hidden');
@@ -122,6 +125,16 @@
     },
     joinGame: function() {
       return window.app.navigate('#player_start_game');
+    }
+  });
+
+  window.PlayerCardView = Backbone.View.extend({
+    initialize: function() {},
+    tagName: 'div',
+    className: 'player-card-view',
+    render: function() {
+      this.$el.html(this.template());
+      return this;
     }
   });
 
