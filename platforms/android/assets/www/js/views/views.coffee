@@ -121,6 +121,21 @@ window.PlayerGamesIndexView = Backbone.View.extend # NEED TO MAKE TMP!!!!
   joinGame: ->
     window.app.navigate '#player_start_game'
     
+window.PlayerCardView = Backbone.View.extend
+  initialize: ->
+
+  tagName: 'div'
+  className: 'player-card-view'    
+
+  render: ->
+    @.$el.html @.template()
+    @
+
+  events:
+    'click #choice-a':    
+    'click #choice-b':    
+    'click #choice-c':    
+    'click #choice-d':    
 
 # window.NavBar = Backbone.View.extend
 #   tagName: 'nav'
