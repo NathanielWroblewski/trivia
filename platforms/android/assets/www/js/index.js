@@ -1,9 +1,9 @@
-var app = {
+application = {
     // Application Constructor
     initialize: function() {
         // app.receivedEvent('deviceReady');     
         // this.bindEvents();
-        deviceReady();
+        window.deviceReady();
     },
     // Bind Event Listeners
     //

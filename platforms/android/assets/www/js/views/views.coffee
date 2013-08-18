@@ -13,11 +13,11 @@ window.HomePageView = Backbone.View.extend
     @
 
   routeToDealerPath: ->
-    app.navigate '#dealer_game_new',
+    window.app.navigate '#dealer_game_new',
       trigger: true
 
   routeToPlayerPath: ->
-    app.navigate ''
+    window.app.navigate ''
 
 ################## DEALER PATH ###################
 
@@ -46,7 +46,7 @@ window.DealerGameNewView = Backbone.View.extend
       trigger: true
 
   returnToHomePage: ->
-  	app.navigate '#home_page',
+  	window.app.navigate '#home_page',
   	  trigger: true
 
 window.DealerDeckIndexView = Backbone.View.extend
@@ -62,15 +62,15 @@ window.DealerDeckIndexView = Backbone.View.extend
 
   retrieveDeck: ->
   	# RetrieveDeckCollection
-  	app.navigate '#dealer_game_show'
+  	window.app.navigate '#dealer_game_show'
 
   purchaseDeck: ->
   	# Purchase a Deck Through PayPal
-  	app.navigate '#dealer_game_show'
+  	window.app.navigate '#dealer_game_show'
 
   constructDeck: ->
   	# Contruct a Deck
-  	app.navigate '#dealer_game_show'
+  	window.app.navigate '#dealer_game_show'
 
 window.DealerGameShowView = Backbone.View.extend
   initialize: ->

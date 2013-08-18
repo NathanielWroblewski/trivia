@@ -13,12 +13,12 @@
       return this;
     },
     routeToDealerPath: function() {
-      return app.navigate('#dealer_game_new', {
+      return window.app.navigate('#dealer_game_new', {
         trigger: true
       });
     },
     routeToPlayerPath: function() {
-      return app.navigate('');
+      return window.app.navigate('');
     }
   });
 
@@ -49,7 +49,7 @@
       });
     },
     returnToHomePage: function() {
-      return app.navigate('#home_page', {
+      return window.app.navigate('#home_page', {
         trigger: true
       });
     }
@@ -65,13 +65,13 @@
       'click .dealer-make-deck': 'constructDeck'
     },
     retrieveDeck: function() {
-      return app.navigate('#dealer_game_show');
+      return window.app.navigate('#dealer_game_show');
     },
     purchaseDeck: function() {
-      return app.navigate('#dealer_game_show');
+      return window.app.navigate('#dealer_game_show');
     },
     constructDeck: function() {
-      return app.navigate('#dealer_game_show');
+      return window.app.navigate('#dealer_game_show');
     }
   });
 

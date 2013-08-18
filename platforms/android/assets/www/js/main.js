@@ -4,8 +4,7 @@
 
   deviceReady = function() {
     return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView'], function() {
-      var app;
-      app = new Router();
+      window.app = new Router();
       return Backbone.history.start();
     });
   };
@@ -14,7 +13,7 @@
 
   window.Router = Backbone.Router.extend({
     routes: {
-      'home_page': 'home_page',
+      '': 'home_page',
       'dealer_game_new': 'dealer_game_new',
       'dealer_deck_index': 'dealer_deck_index',
       'dealer_game_show': 'dealer_game_show',
