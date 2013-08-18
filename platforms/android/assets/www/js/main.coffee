@@ -19,6 +19,8 @@ window.Router = Backbone.Router.extend
   	'dealer_game_show': 'dealer_game_show'
   	'dealer_stats_show': 'dealer_stats_show'
   	'game_over': 'game_over'
+    'player_games_index': 'player_games_index'
+    'player_start_game': 'player_start_game'
 
   initialize: ->
 
@@ -46,5 +48,13 @@ window.Router = Backbone.Router.extend
     @.dealerStatsShowView = new DealerStatsShowView()
     $('#content').html @.dealerStatsShowView.el
     @.dealerStatsShowView.render()
+
+  player_games_index: ->
+    @.playerGamesIndexView = new PlayerGamesIndexView()
+    $('#content').html @playerGamesIndexView.el
+    @.playerGamesIndexView.render()
+
+  # @.player_start_game: ->
+  #   @  
 
 window.deviceReady = deviceReady

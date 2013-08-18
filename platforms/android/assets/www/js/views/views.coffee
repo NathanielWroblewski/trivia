@@ -17,7 +17,8 @@ window.HomePageView = Backbone.View.extend
       trigger: true
 
   routeToPlayerPath: ->
-    window.app.navigate ''
+    window.app.navigate '#player_games_index'
+      trigger: true
 
 ################## DEALER PATH ###################
 
@@ -95,6 +96,29 @@ window.DealerStatsShowView = Backbone.View.extend
   render: ->
   	@.$el.html @.template()
   	@
+
+window.PlayerGamesIndexView = Backbone.View.extend # NEED TO MAKE TMP!!!!
+  initialize: ->
+
+  # function (args) {  
+#         _.bindAll(this, 'changeName');  
+#           this.model.bind('change:name', this.changeName);  
+# },  
+# });  
+
+  tagName: 'div'
+  className: 'player-games-index'
+
+  render: ->
+    @.$el.html @.template()
+    @
+
+  events:
+    'click .player-join-game': 'joinGame'
+
+  joinGame: ->
+    window.app.navigate '#player_start_game'
+    
 
 # window.NavBar = Backbone.View.extend
 #   tagName: 'nav'
