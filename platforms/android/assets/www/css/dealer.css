@@ -39,3 +39,113 @@ nav {
 .app {
   display: none;
 }
+
+/* STYLING FOR DEALER CREATE NEW GAME */
+
+#dng-title {
+    background-color: #00e2d7;
+    border-bottom: 5px solid grey;
+    color: #00f9f3;
+    font-size: 2em;
+    height: 1.75em;
+    line-height: 1.75em;
+    text-align: center;
+    width: 100%;
+}
+
+#dng-options {
+    background-color: #f5f9f6;
+    border: 1px solid transparent; /* without this the div won't surround everything completely... strange... might be bc of box-sizing */
+    width: 100%;
+}
+
+#dng-options p {
+    color: #00e2d7;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#dng-options div {
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    height: 100%;
+    width: 90%;
+    padding: 5%;
+}
+
+#dng-options div label {
+    background-color: #595a59;
+    border: none;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+#dng-options div input {
+    background-color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 3em;
+}
+
+#dng-options div > input:first-of-type {
+    margin-bottom: 5%;
+}
+
+#dng-deck-title {
+    background-color: white;
+    border-bottom: 5px solid blue;
+    color: #00e2d7;
+    height: 2.5em;
+    line-height: 2em;
+    text-align: center;
+}
+
+#dng-deck-options {
+    margin: 0 auto;
+    width: 80%;
+}
+
+#dng-deck-options input {
+    display: none;
+}
+
+#dng-deck-options input:checked + label {
+    background-color: red;
+}
+
+#dng-deck-options label {
+    display: block;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    height: 2em;
+    line-height: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+#dng-deck-options label:first-child {
+    border-top: none;
+}
+
+#dng-break {
+    background-color: white;
+    height: 1.5em;
+    width: 100%;
+}
+
+#dng-next {
+    background-color: #00e2d7;
+    border: none;
+    color: #00f9f3;
+    font-size: 1em;
+    height: 2em;
+    line-height: 2em;
+    margin-left: 10%;
+    margin-top: -10%;
+    width: 80%;
+}

@@ -16,8 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- 
-* { margin: 0; padding: 0;}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 
 body, html {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
