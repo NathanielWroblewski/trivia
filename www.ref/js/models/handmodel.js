@@ -3,7 +3,7 @@ window.PackModel = Backbone.Model.extend({
   initialize: function() {},
   
   url: function() {
-   return "http://www.foo.com/api/packs/"+this.id";
+   return "http://www.foo.com/api/packs/"+this.id;
   }
 });
 

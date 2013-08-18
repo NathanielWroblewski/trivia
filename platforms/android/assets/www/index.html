@@ -1,118 +1,24 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-  -->
-  <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/dealer.css" />
-    <title>Trivia</title>
-  </head>
-  <body>
-    <div class="app">
-      <nav>
-        <ul>
-          <li>
-            <button type="button">
-              Players
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              Score
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              Game
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <div id="home-page" class="page">
-        <ul>
-          <li>
-            <button type="button" id="new-button">
-              New Game
-            </button>
-          </li>
-          <li>
-            <button type="button" id="join-button">
-              Join Game
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div id="dealer-game-new" class="page hidden">
-        <form>
-          <p>Game Name:</p>
-          <input type="text" name="name">
-          <input type="submit" value="Create Game">
-        </form>
-        <button type="button">
-          Cancel
-        </button>
-      </div>
-      <div id="dealer-deck-index" class="page hidden">
-        <ul class="deck">
-          <li>
-            <h2>Deck Name</h2>
-          </li>
-        </ul>
-        <button type="button">
-          Get More Decks
-        </button>
-        <button type="button">
-          Make a Deck
-        </button>
-      </div>
-      <div id="dealer-game-show" class="page hidden">
-        <div class="players-in-game">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Trivia</title>
+    </head>
+    <body>
+        <div id="content" class="app page">
         </div>
-        <div class="card-swipe-area">
-        </div>
-        <div class="flip-button">
-        </div>
-      </div>
-      <div id="dealer-stats-show" class="page hidden">
-        <ul>
-          <li>
-            <h2>Player Name</h2>
-            <p>Player Score</p>
-          </li>
-        </ul>
-      </div>
-      <div id="game-over" class="page hidden">
-        <ul>
-          <li>
-            <h2>Player</h2>
-            <p>Score<p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- // <script type="text/javascript" src="phonegap.js"></script> -->
-      <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript">
-      app.initialize();
-      </script>
+        <!-- // <script type="text/javascript" src="phonegap.js"></script> -->
+        <script src="lib/jquery-1.7.2.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="lib/coffee-script.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
-    </html>
+</html>
