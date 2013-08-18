@@ -3,9 +3,12 @@ window.Router = Backbone.Router.extend
     '': 'home_page'
     'dealer_game_new': 'dealer_game_new'
     'player_games_index': 'player_games_index'
+    'player_card_view': 'player_card_view'
+    'dealer_deck_index': 'dealer_deck_index'
     'dealer_game_show': 'dealer_game_show'
     'dealer_stats_show': 'dealer_stats_show'
     'game_over': 'game_over'
+
 
   initialize: ->
 
@@ -24,6 +27,11 @@ window.Router = Backbone.Router.extend
     $('#content').html @.playerGamesIndexView.el
     @.playerGamesIndexView.render()
 
+  player_card_view: ->
+    @.playerCardView = new playerCardView()
+    $('#content').html @.playerCardView.el
+    @.playerCardView.render()
+      
   dealer_deck_index: ->
     @.dealerDeckIndexView = new DealerDeckIndexView()
     $('#content').html @.dealerDeckIndexView.el
@@ -47,6 +55,8 @@ deviceReady = ->
     'DealerDeckIndexView'
     'DealerGameShowView'
     'DealerStatsShowView'
+    'PlayerGamesIndex'
+    'PlayerCardView'
   ], ->
     window.app = new Router()
     Backbone.history.start()
