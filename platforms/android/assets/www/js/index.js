@@ -1,22 +1,23 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        // app.receivedEvent('deviceready');        
-        this.bindEvents();
+        // app.receivedEvent('deviceReady');     
+        // this.bindEvents();
+        deviceReady()
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceReady', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.receivedEvent('deviceReady');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

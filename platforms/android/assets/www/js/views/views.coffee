@@ -1,55 +1,55 @@
-window.HomePage = Backbone.View.extend
+window.HomePageView = Backbone.View.extend
   initialize: ->
 
   tagName: 'div'
   className: 'home-page'
 
   events:
-  	'click .dealer-path': 'routeToDealerPath'
-  	'click .player-path': 'routeToPlayerPath'
+    'click .dealer-path': 'routeToDealerPath'
+    'click .player-path': 'routeToPlayerPath'
 
-	render: ->
-	  @.$el.html @.template()
-	  @
+  render: ->
+    @.$el.html @.template()
+    @
 
-	routeToDealerPath: ->
-	  app.navigate '#dealer_game_new',
-	    trigger: true
+  routeToDealerPath: ->
+    app.navigate '#dealer_game_new',
+      trigger: true
 
   routeToPlayerPath: ->
-  	app.navigate ''
+    app.navigate ''
 
 ################## DEALER PATH ###################
 
-window.DealerGameNew = Backbone.View.extend
+window.DealerGameNewView = Backbone.View.extend
   initialize: ->
 
   tagName: 'div'
   className: 'dealer-game-new'
 
   events: 
-  	'click .dealer-new-game-button': 'instantiateDealerAndGame'
-  	'click .cancel': 'returnToHomePage'
+    'click .dealer-new-game-button': 'instantiateDealerAndGame'
+    'click .cancel': 'returnToHomePage'
 
   render: ->
-  	@.$el.html @.template()
-  	@
+    @.$el.html @.template()
+    @
 
   instantiateDealerAndGame: ->
-  	gameName = $('.dealer-game-name').val()
-  	dealerName = $('.dealer-dealer-name').val()
-  	@.gameModel = new GameModel
-  	  name: gameName
-  	@.dealerModel = new DealerModel
-  	  name: dealerName
-  	app.navigate '#dealer_deck_index',
-  	  trigger: true
+    gameName = $('.dealer-game-name').val()
+    dealerName = $('.dealer-dealer-name').val()
+    @.gameModel = new GameModel
+      name: gameName
+    @.dealerModel = new DealerModel
+      name: dealerName
+    app.navigate '#dealer_deck_index',
+      trigger: true
 
   returnToHomePage: ->
   	app.navigate '#home_page',
   	  trigger: true
 
-window.DealerDeckIndex = Backbone.View.extend
+window.DealerDeckIndexView = Backbone.View.extend
   initialize: ->
 
   tagName: 'div'
@@ -72,7 +72,7 @@ window.DealerDeckIndex = Backbone.View.extend
   	# Contruct a Deck
   	app.navigate '#dealer_game_show'
 
-window.DealerGameShow = Backbone.View.extend
+window.DealerGameShowView = Backbone.View.extend
   initialize: ->
   
   tagName: 'div'
@@ -84,7 +84,7 @@ window.DealerGameShow = Backbone.View.extend
   	@.$el.html @.template()
   	@
 
-window.DealerStatsShow = Backbone.View.extend
+window.DealerStatsShowView = Backbone.View.extend
   initialize: ->
 
   tagName: 'div'

@@ -1,11 +1,10 @@
 deviceReady = ->
   templateLoader.load [
-    'home_page'
-    'dealer_game_new'
-    'dealer_deck_index'
-    'dealer_game_show'
-    'dealer_stats_show'
-    'game_over'
+    'HomePageView'
+    'DealerGameNewView'
+    'DealerDeckIndexView'
+    'DealerGameShowView'
+    'DealerStatsShowView'
   ], ->
     app = new Router()
     Backbone.history.start()
@@ -48,3 +47,4 @@ window.Router = Backbone.Router.extend
     $('#content').html @.dealerStatsShowView.el
     @.dealerStatsShowView.render()
 
+window.deviceReady = deviceReady
