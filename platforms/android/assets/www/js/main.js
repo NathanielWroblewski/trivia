@@ -2,19 +2,11 @@
 (function() {
   var deviceReady;
 
-  deviceReady = function() {
-    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView'], function() {
-      window.app = new Router();
-      return Backbone.history.start();
-    });
-  };
-
-  document.addEventListener('deviceReady', deviceReady, true);
-
   window.Router = Backbone.Router.extend({
     routes: {
       '': 'home_page',
       'dealer_game_new': 'dealer_game_new',
+      'player_games_index': 'player_games_index',
       'dealer_deck_index': 'dealer_deck_index',
       'dealer_game_show': 'dealer_game_show',
       'dealer_stats_show': 'dealer_stats_show',
@@ -30,6 +22,11 @@
       this.dealerGameNewView = new DealerGameNewView();
       $('#content').html(this.dealerGameNewView.el);
       return this.dealerGameNewView.render();
+    },
+    player_games_index: function() {
+      this.playerGamesIndexView = new PlayerGamesIndexView();
+      $('#content').html(this.playerGamesIndexView.el);
+      return this.playerGamesIndexView.render();
     },
     dealer_deck_index: function() {
       this.dealerDeckIndexView = new DealerDeckIndexView();
@@ -48,6 +45,15 @@
     }
   });
 
+  deviceReady = function() {
+    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView'], function() {
+      window.app = new Router();
+      return Backbone.history.start();
+    });
+  };
+
   window.deviceReady = deviceReady;
+
+  document.addEventListener('deviceReady', deviceReady, true);
 
 }).call(this);

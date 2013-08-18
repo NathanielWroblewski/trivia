@@ -3,8 +3,8 @@ body {
 }
 
 #content {
-  height: 100px;
-  width: 100px;
+  height: 100%;
+  width: 100%;
 }
 
 nav {
@@ -21,8 +21,8 @@ nav {
   width: 302px;
   position: fixed;
   top: 225px;
-  left: 18px;
-  background-size: 100%;
+  left: 20%;
+  background-size: 100% 100%;
   background-image: url("../img/D1_page01-02.png");
   background-repeat: no-repeat;
 }
@@ -31,9 +31,9 @@ nav {
   height: 113px;
   width: 302px;
   position: fixed;
-  top: 338px;
-  left: 18px;
-  background-size: 100%;
+  top: 348px;
+  left: 20%;
+  background-size: 100% 100%;
   background-image: url("../img/D1_page01-07.png");
   background-repeat: no-repeat;
 }

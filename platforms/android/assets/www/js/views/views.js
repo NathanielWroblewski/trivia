@@ -5,8 +5,8 @@
     tagName: 'div',
     className: 'home-page',
     events: {
-      'click .dealer-path': 'routeToDealerPath',
-      'click .player-path': 'routeToPlayerPath'
+      'click #new-button': 'routeToDealerPath',
+      'click #join-button': 'routeToPlayerPath'
     },
     render: function() {
       this.$el.html(this.template());
@@ -18,23 +18,23 @@
       });
     },
     routeToPlayerPath: function() {
-      return window.app.navigate('');
+      return window.app.navigate('#player_games_index', {
+        trigger: true
+      });
     }
   });
 
   window.DealerGameNewView = Backbone.View.extend({
-    initialize: function() {},
     tagName: 'div',
-    className: 'dealer-game-new',
     events: {
-      'click .dealer-new-game-button': 'instantiateDealerAndGame',
-      'click .cancel': 'returnToHomePage'
+      'click #dng-next': 'instantiateDealerAndGame',
+      'click .dealer-cancel': 'returnToHomePage'
     },
     render: function() {
       this.$el.html(this.template());
       return this;
     },
-    instantiateDealerAndGame: function() {
+    instantiateDealerAndGame: function(e) {
       var dealerName, gameName;
       gameName = $('.dealer-game-name').val();
       dealerName = $('.dealer-dealer-name').val();
@@ -44,6 +44,8 @@
       this.dealerModel = new DealerModel({
         name: dealerName
       });
+      window.game = this.gameModel;
+      window.dealer = this.dealer;
       return window.app.navigate('#dealer_deck_index', {
         trigger: true
       });
@@ -92,6 +94,22 @@
     render: function() {
       this.$el.html(this.template());
       return this;
+    }
+  });
+
+  window.PlayerGamesIndexView = Backbone.View.extend({
+    initialize: function() {},
+    tagName: 'div',
+    className: 'player-games-index',
+    render: function() {
+      this.$el.html(this.template());
+      return this;
+    },
+    events: {
+      'click .player-join-game': 'joinGame'
+    },
+    joinGame: function() {
+      return window.app.navigate('#player_start_game');
     }
   });
 

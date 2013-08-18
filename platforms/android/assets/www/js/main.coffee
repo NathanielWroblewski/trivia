@@ -1,38 +1,29 @@
-deviceReady = ->
-  templateLoader.load [
-    'HomePageView'
-    'DealerGameNewView'
-    'DealerDeckIndexView'
-    'DealerGameShowView'
-    'DealerStatsShowView'
-  ], ->
-    window.app = new Router()
-    Backbone.history.start()
-
-document.addEventListener 'deviceReady', deviceReady, true
-
 window.Router = Backbone.Router.extend
   routes:
-  	'': 'home_page'
-  	'dealer_game_new': 'dealer_game_new'
-  	'dealer_deck_index': 'dealer_deck_index'
-  	'dealer_game_show': 'dealer_game_show'
-  	'dealer_stats_show': 'dealer_stats_show'
-  	'game_over': 'game_over'
+    '': 'home_page'
+    'dealer_game_new': 'dealer_game_new'
     'player_games_index': 'player_games_index'
-    'player_start_game': 'player_start_game'
+    'dealer_deck_index': 'dealer_deck_index'
+    'dealer_game_show': 'dealer_game_show'
+    'dealer_stats_show': 'dealer_stats_show'
+    'game_over': 'game_over'
 
   initialize: ->
 
   home_page: ->
-  	@.homePageView = new HomePageView()
-  	$('#content').html @.homePageView.el
-  	@.homePageView.render()
+    @.homePageView = new HomePageView()
+    $('#content').html @.homePageView.el
+    @.homePageView.render()
 
   dealer_game_new: ->
-  	@.dealerGameNewView = new DealerGameNewView()
-  	$('#content').html @.dealerGameNewView.el
-  	@.dealerGameNewView.render()
+    @.dealerGameNewView = new DealerGameNewView()
+    $('#content').html @.dealerGameNewView.el
+    @.dealerGameNewView.render()
+
+  player_games_index: ->
+    @.playerGamesIndexView = new PlayerGamesIndexView()
+    $('#content').html @.playerGamesIndexView.el
+    @.playerGamesIndexView.render()
 
   dealer_deck_index: ->
     @.dealerDeckIndexView = new DealerDeckIndexView()
@@ -49,12 +40,19 @@ window.Router = Backbone.Router.extend
     $('#content').html @.dealerStatsShowView.el
     @.dealerStatsShowView.render()
 
-  player_games_index: ->
-    @.playerGamesIndexView = new PlayerGamesIndexView()
-    $('#content').html @playerGamesIndexView.el
-    @.playerGamesIndexView.render()
 
-  # @.player_start_game: ->
-  #   @  
+deviceReady = ->
+  templateLoader.load [
+    'HomePageView'
+    'DealerGameNewView'
+    'DealerDeckIndexView'
+    'DealerGameShowView'
+    'DealerStatsShowView'
+  ], ->
+    window.app = new Router()
+    Backbone.history.start()
 
 window.deviceReady = deviceReady
+
+
+document.addEventListener 'deviceReady', deviceReady, true

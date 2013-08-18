@@ -5,8 +5,8 @@ window.HomePageView = Backbone.View.extend
   className: 'home-page'
 
   events:
-    'click .dealer-path': 'routeToDealerPath'
-    'click .player-path': 'routeToPlayerPath'
+    'click #new-button': 'routeToDealerPath'
+    'click #join-button': 'routeToPlayerPath'
 
   render: ->
     @.$el.html @.template()
@@ -17,38 +17,40 @@ window.HomePageView = Backbone.View.extend
       trigger: true
 
   routeToPlayerPath: ->
-    window.app.navigate '#player_games_index'
+    window.app.navigate '#player_games_index',
       trigger: true
 
 ################## DEALER PATH ###################
 
 window.DealerGameNewView = Backbone.View.extend
-  initialize: ->
+  # initialize: ->
 
   tagName: 'div'
-  className: 'dealer-game-new'
+  # className: 'dealer-game-new'
 
   events: 
-    'click .dealer-new-game-button': 'instantiateDealerAndGame'
-    'click .cancel': 'returnToHomePage'
+    'click #dng-next': 'instantiateDealerAndGame'
+    'click .dealer-cancel': 'returnToHomePage'
 
   render: ->
     @.$el.html @.template()
     @
 
-  instantiateDealerAndGame: ->
+  instantiateDealerAndGame: (e) ->
     gameName = $('.dealer-game-name').val()
     dealerName = $('.dealer-dealer-name').val()
     @.gameModel = new GameModel
       name: gameName
     @.dealerModel = new DealerModel
       name: dealerName
+    window.game = @.gameModel
+    window.dealer = @.dealer
     window.app.navigate '#dealer_deck_index',
       trigger: true
 
   returnToHomePage: ->
-  	window.app.navigate '',
-  	  trigger: true
+    window.app.navigate '',
+      trigger: true
 
 window.DealerDeckIndexView = Backbone.View.extend
   initialize: ->
@@ -62,7 +64,7 @@ window.DealerDeckIndexView = Backbone.View.extend
   	'click .dealer-make-deck': 'constructDeck'
 
   retrieveDeck: ->
-  	# RetrieveDeckCollection
+  	# RetrieveCardCollection
   	window.app.navigate '#dealer_game_show'
 
   purchaseDeck: ->

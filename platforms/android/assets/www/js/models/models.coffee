@@ -1,21 +1,21 @@
 ########### DEALER PATH ###############
 
-window.Game = Backbone.Model.extend
+window.GameModel = Backbone.Model.extend
   initialize: ->
 
-window.Deck = Backbone.Model.extend
+window.DeckModel = Backbone.Model.extend
   initialize: ->
 
-window.Card = Backbone.Model.extend
+window.CardModel = Backbone.Model.extend
   initialize: ->
 
-window.Dealer = Backbone.Model.extend
+window.DealerModel = Backbone.Model.extend
   initialize: ->
 
 ############ PLAYER PATH ##############
 
-window.Player = Backbone.Model.extend
+window.PlayerModel = Backbone.Model.extend
  initialize: ->
 
-window.Guess = Backbone.Model.extend
+window.GuessModel = Backbone.Model.extend
   initialize: ->
