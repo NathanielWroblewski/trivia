@@ -46,7 +46,7 @@
       });
       window.game = this.gameModel;
       window.dealer = this.dealer;
-      return window.app.navigate('#dealer_deck_index', {
+      return window.app.navigate('#dealer_game_show', {
         trigger: true
       });
     },
@@ -81,9 +81,21 @@
     initialize: function() {},
     tagName: 'div',
     className: 'dealer-game-show',
+    events: {
+      'click .card-swipe-area': 'flickCard',
+      'click .flip-button': 'nextCard'
+    },
     render: function() {
       this.$el.html(this.template());
       return this;
+    },
+    flickCard: function() {
+      $('.card-swipe-area').addClass('hidden');
+      return $('.flip-button').removeClass('hidden');
+    },
+    nextCard: function() {
+      $('.flip-button').addClass('hidden');
+      return $('.card-swipe-area2').removeClass('hidden');
     }
   });
 

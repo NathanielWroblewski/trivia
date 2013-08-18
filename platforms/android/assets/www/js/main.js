@@ -7,7 +7,6 @@
       '': 'home_page',
       'dealer_game_new': 'dealer_game_new',
       'player_games_index': 'player_games_index',
-      'dealer_deck_index': 'dealer_deck_index',
       'dealer_game_show': 'dealer_game_show',
       'dealer_stats_show': 'dealer_stats_show',
       'game_over': 'game_over'

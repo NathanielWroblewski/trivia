@@ -45,7 +45,7 @@ window.DealerGameNewView = Backbone.View.extend
       name: dealerName
     window.game = @.gameModel
     window.dealer = @.dealer
-    window.app.navigate '#dealer_deck_index',
+    window.app.navigate '#dealer_game_show',
       trigger: true
 
   returnToHomePage: ->
@@ -81,11 +81,21 @@ window.DealerGameShowView = Backbone.View.extend
   tagName: 'div'
   className: 'dealer-game-show'
 
-  # events: swipe up, swipe left/right, flip button
+  events:
+    'click .card-swipe-area': 'flickCard'
+    'click .flip-button': 'nextCard'
 
   render: ->
-  	@.$el.html @.template()
-  	@
+    @.$el.html @.template()
+    @
+
+  flickCard: ->
+    $('.card-swipe-area').addClass 'hidden'
+    $('.flip-button').removeClass 'hidden'
+
+  nextCard: ->
+    $('.flip-button').addClass 'hidden'
+    $('.card-swipe-area2').removeClass 'hidden'
 
 window.DealerStatsShowView = Backbone.View.extend
   initialize: ->

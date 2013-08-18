@@ -272,3 +272,17 @@ content: ' ';
     margin-top: 5%;
     width: 80%;
 }
+
+.hidden {
+  display: none;
+}
+
+/*#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer div {
+    display: inline-block;
+}*/
