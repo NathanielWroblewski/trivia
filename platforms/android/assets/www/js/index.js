@@ -19,7 +19,8 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        app.receivedEvent('deviceready');        
+        // this.bindEvents();
     },
     // Bind Event Listeners
     //
