@@ -3,7 +3,7 @@ var app = {
     initialize: function() {
         // app.receivedEvent('deviceReady');     
         // this.bindEvents();
-        deviceReady()
+        deviceReady();
     },
     // Bind Event Listeners
     //
