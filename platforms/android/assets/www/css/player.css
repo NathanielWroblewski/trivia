@@ -1,0 +1,28 @@
+body {
+  background-color: lightgray;
+  height: 300px;
+  width: 100%;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+}
+
+#waiting_images {
+  height: 100%;
+  width: 100%;
+  border: 2px solid red;
+}
+
+#3_secs {
+  background-image: url('../img/Player_waiting_for_cards-04.png')
+}
+
+#2_secs {
+  background-image: url('../img/Player_waiting_for_cards-03.png')
+}
+
+#1_sec {
+  background-image: url('../img/Player_waiting_for_cards-02.png')
+}
