@@ -8,6 +8,7 @@ deviceReady = ->
     'game_over'
   ], ->
     app = new Router()
+    Backbone.history.start()
 
 document.addEventListener 'deviceReady', deviceReady, true
 
