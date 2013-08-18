@@ -42,11 +42,11 @@ window.DealerGameNewView = Backbone.View.extend
       name: gameName
     @.dealerModel = new DealerModel
       name: dealerName
-    app.navigate '#dealer_deck_index',
+    window.app.navigate '#dealer_deck_index',
       trigger: true
 
   returnToHomePage: ->
-  	window.app.navigate '#home_page',
+  	window.app.navigate '',
   	  trigger: true
 
 window.DealerDeckIndexView = Backbone.View.extend

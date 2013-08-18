@@ -44,12 +44,12 @@
       this.dealerModel = new DealerModel({
         name: dealerName
       });
-      return app.navigate('#dealer_deck_index', {
+      return window.app.navigate('#dealer_deck_index', {
         trigger: true
       });
     },
     returnToHomePage: function() {
-      return window.app.navigate('#home_page', {
+      return window.app.navigate('', {
         trigger: true
       });
     }
